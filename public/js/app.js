@@ -20148,7 +20148,7 @@ var render = function() {
                     _c("div", { staticClass: "card" }, [
                       _c("div", { staticClass: "card-header" }, [
                         _c("h5", { staticClass: "card-title" }, [
-                          _vm._v(_vm._s(notes.note_title))
+                          _vm._v(_vm._s(notes.title))
                         ]),
                         _vm._v(" "),
                         _c("h6", { staticClass: "card-subtitle text-muted" }, [
@@ -20161,7 +20161,7 @@ var render = function() {
                         { staticClass: "card-body" },
                         [
                           _c("p", { staticClass: "card-text" }, [
-                            _vm._v(_vm._s(notes.note_text))
+                            _vm._v(_vm._s(notes.description))
                           ]),
                           _vm._v(" "),
                           _c(
@@ -20247,7 +20247,7 @@ var render = function() {
                     _c("div", { staticClass: "card" }, [
                       _c("div", { staticClass: "card-header" }, [
                         _c("h5", { staticClass: "card-title" }, [
-                          _vm._v(_vm._s(notes.note_title))
+                          _vm._v(_vm._s(notes.title))
                         ]),
                         _vm._v(" "),
                         _c("h6", { staticClass: "card-subtitle text-muted" }, [
@@ -20260,7 +20260,7 @@ var render = function() {
                         { staticClass: "card-body" },
                         [
                           _c("p", { staticClass: "card-text" }, [
-                            _vm._v(_vm._s(notes.note_text))
+                            _vm._v(_vm._s(notes.description))
                           ]),
                           _vm._v(" "),
                           _c(
@@ -20352,19 +20352,19 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.note.note_title,
-                      expression: "note.note_title"
+                      value: _vm.note.title,
+                      expression: "note.title"
                     }
                   ],
                   staticClass: "form-control form-control-lg",
-                  attrs: { type: "text" },
-                  domProps: { value: _vm.note.note_title },
+                  attrs: { type: "text", required: "" },
+                  domProps: { value: _vm.note.title },
                   on: {
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.note, "note_title", $event.target.value)
+                      _vm.$set(_vm.note, "title", $event.target.value)
                     }
                   }
                 })
@@ -20383,7 +20383,7 @@ var render = function() {
                     }
                   ],
                   staticClass: "form-control form-control-lg",
-                  attrs: { type: "text" },
+                  attrs: { type: "text", required: "" },
                   domProps: { value: _vm.note.created_by },
                   on: {
                     input: function($event) {
@@ -20404,19 +20404,19 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.note.note_text,
-                      expression: "note.note_text"
+                      value: _vm.note.description,
+                      expression: "note.description"
                     }
                   ],
                   staticClass: "form-control form-control-lg",
-                  attrs: { type: "text", rows: "10" },
-                  domProps: { value: _vm.note.note_text },
+                  attrs: { type: "text", rows: "10", required: "" },
+                  domProps: { value: _vm.note.description },
                   on: {
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.note, "note_text", $event.target.value)
+                      _vm.$set(_vm.note, "description", $event.target.value)
                     }
                   }
                 })
@@ -20484,19 +20484,19 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.note.note_title,
-                      expression: "note.note_title"
+                      value: _vm.note.title,
+                      expression: "note.title"
                     }
                   ],
                   staticClass: "form-control form-control-lg",
-                  attrs: { type: "text" },
-                  domProps: { value: _vm.note.note_title },
+                  attrs: { type: "text", required: "" },
+                  domProps: { value: _vm.note.title },
                   on: {
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.note, "note_title", $event.target.value)
+                      _vm.$set(_vm.note, "title", $event.target.value)
                     }
                   }
                 })
@@ -20515,7 +20515,7 @@ var render = function() {
                     }
                   ],
                   staticClass: "form-control form-control-lg",
-                  attrs: { type: "text" },
+                  attrs: { type: "text", required: "" },
                   domProps: { value: _vm.note.created_by },
                   on: {
                     input: function($event) {
@@ -20536,19 +20536,19 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.note.note_text,
-                      expression: "note.note_text"
+                      value: _vm.note.description,
+                      expression: "note.description"
                     }
                   ],
                   staticClass: "form-control form-control-lg",
-                  attrs: { type: "text", rows: "10" },
-                  domProps: { value: _vm.note.note_text },
+                  attrs: { type: "text", rows: "10", required: "" },
+                  domProps: { value: _vm.note.description },
                   on: {
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.$set(_vm.note, "note_text", $event.target.value)
+                      _vm.$set(_vm.note, "description", $event.target.value)
                     }
                   }
                 })

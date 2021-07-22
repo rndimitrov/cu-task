@@ -11,12 +11,12 @@
                         <div class="card-body">
                             <div class="card">
                                 <div class="card-header">
-                                    <h5 class="card-title">{{ notes.note_title }}</h5>
+                                    <h5 class="card-title">{{ notes.title }}</h5>
                                     <h6 class="card-subtitle text-muted">Created by: {{ notes.created_by }}</h6>
                                 </div>
 
                                 <div class="card-body">
-                                    <p class="card-text">{{ notes.note_text }}</p>
+                                    <p class="card-text">{{ notes.description }}</p>
                                     <router-link :to="{name: 'edit', params:{id: notes.id}}" type="button" class="btn btn-success">Edit</router-link>
                                 </div>
                             </div>

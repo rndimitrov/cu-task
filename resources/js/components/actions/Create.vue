@@ -7,15 +7,15 @@
                         <form @submit.prevent="createNote">
                             <div class="form-group">
                                 <label>Title</label>
-                                <input type="text" class="form-control form-control-lg" v-model="note.note_title">
+                                <input type="text" class="form-control form-control-lg" v-model="note.title" required>
                             </div>
                             <div class="form-group">
                                 <label>Created by</label>
-                                <input type="text" class="form-control form-control-lg" v-model="note.created_by">
+                                <input type="text" class="form-control form-control-lg" v-model="note.created_by" required>
                             </div>
                             <div class="form-group">
                                 <label>Text</label>
-                                <textarea type="text" rows="10" class="form-control form-control-lg" v-model="note.note_text" />
+                                <textarea type="text" rows="10" class="form-control form-control-lg" v-model="note.description" required />
                             </div>
                             <button type="submit" class="btn btn-primary">Create</button>
                         </form>

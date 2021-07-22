@@ -38,11 +38,19 @@ class NotesController extends Controller
      */
     public function store(Request $request)
     {
+
+        $validatedNotes = $request->validate([
+            'title' => ['required', 'max:255'],
+            'created_by' => ['required', 'max:255'],
+            'description' => 'required',
+        ]);
+
         $note = Notes::create($request->post());
+
         return response()->json([
             "notes" => $note
         ]);
-        //
+
     }
 
     /**
@@ -80,6 +88,13 @@ class NotesController extends Controller
     {
         //
         $note = Notes::find($id);
+
+        $validatedNotes = $request->validate([
+            'title' => ['required', 'max:255'],
+            'created_by' => ['required', 'max:255'],
+            'description' => 'required',
+        ]);
+
         $note->update($request->all());
 
         return response()->json("Updated");
