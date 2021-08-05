@@ -34,8 +34,9 @@
         },
         methods: {
             createNote() {
+                let self = this;
                 this.axios.post('/api/notes', this.note).then(response => {
-                    this.$router.push({name: "notes"})
+                    self.$router.push({name: "notes"})
                 })
             }
         }

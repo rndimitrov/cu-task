@@ -40,9 +40,10 @@
         },
         methods: {
             updateNote() {
+                let self = this;
                 this.axios.patch(`/api/notes/${this.$route.params.id}`, this.note)
                     .then((response) => {
-                        this.$router.push({ name: 'notes' });
+                        self.$router.push({ name: 'notes' });
                     });
             }
         }
